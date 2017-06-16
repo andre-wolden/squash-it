@@ -1,0 +1,34 @@
+<h3>Stats</h3>
+
+<% for player in @players %>
+  <% for game in @games %>
+    <% if game.winner_id == player.id %>
+      <% @n_wins += 1 %>
+    <% elsif game.loser_id == player.id %>
+      <% @n_losses += 1 %>
+    <% end %>
+  <% end %>
+  <h4><%= player.name %></h4>
+  <% @win_rate = @n_wins.to_f / (@n_wins + @n_losses) %>
+  <% @win_rate_p = @win_rate * 100 %>
+  <table>
+  	<tbody>
+  		<tr>
+  			<td>Wins:</td>
+  			<td><%= @n_wins %></td>
+  		</tr>
+  		<tr>
+  			<td>Losses:</td>
+  			<td><%= @n_losses %></td>
+  		</tr>
+  		<tr>
+  			<td>Win rate</td>
+  			<td><%= @win_rate_p.round(0) %> %</td>
+  		</tr>
+  	</tbody>
+  </table>
+
+  <% @n_wins = 0 %>
+  <% @n_losses = 0 %>
+
+<% end %>
