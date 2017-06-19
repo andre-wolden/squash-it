@@ -1,0 +1,60 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+#bodyen {
+	width: 100%;
+	background-color: #dddddd;
+	border-radius: 5px;
+
+}
+
+#h3 {
+	text-align: center;
+	color: green;
+
+}
+
+#toppen {
+	width: 100%;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+body {
+	margin:0;
+	max-width: 600px;
+
+}
+
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  /* margin-bottom: 10px; */
+}
+
+.navbar-nav li a {
+    padding:0 15px;
+    line-height:80px;    
+}
+.navbar-header a {
+    padding:0 15px;
+    line-height:80px;    
+}
+
+#home_buttons {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+

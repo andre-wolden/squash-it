@@ -1,8 +1,12 @@
-<h3>Main</h3>
+<div id="h3">
+	<h3>Main</h3>
+</div>
+
 <div>
-	<ul>
-		<li><%= link_to 'Games', 'games' %></li>
-		<li><%= link_to 'Players', 'players' %></li>
-		<li><%= link_to 'Stats', 'stats' %></li>
-	</ul>
+
+	<%= link_to 'Games', 'games', class: "btn btn-default btn-block", id: "home_buttons" %>
+	<%= link_to 'Players', 'players', class: "btn btn-default btn-block", id: "home_buttons" %>
+	<%= link_to 'Stats', 'stats', class: "btn btn-default btn-block", id: "home_buttons" %>
+
+
 </div>

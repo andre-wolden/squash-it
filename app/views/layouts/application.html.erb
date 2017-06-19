@@ -10,8 +10,12 @@
 
   <body>
 
-  	<h1><%= link_to 'Squash-it', root_path %></h1>
+    <div class="" id="toppen">
+  	 <%= link_to 'Squash-it', root_path, class: "btn btn-lg btn-block btn-success" %>
+    </div>
 
-    <%= yield %>
+    <div class = "container" id="bodyen" >
+      <%= yield %>
+    </div>
   </body>
 </html>

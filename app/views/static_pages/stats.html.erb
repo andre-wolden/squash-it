@@ -8,9 +8,17 @@
       <% @n_losses += 1 %>
     <% end %>
   <% end %>
+
+  <% @n_games = @n_wins + @n_losses %>
+  <% if @n_games != 0 %> 
+    <% @win_rate = @n_wins.to_f / (@n_wins + @n_losses) %>
+    <% @win_rate_p = @win_rate * 100 %>
+  <% else %>
+    <% @win_rate_p = 0 %>
+  <% end %>
+
+
   <h4><%= player.name %></h4>
-  <% @win_rate = @n_wins.to_f / (@n_wins + @n_losses) %>
-  <% @win_rate_p = @win_rate * 100 %>
   <table>
   	<tbody>
   		<tr>
@@ -23,12 +31,13 @@
   		</tr>
   		<tr>
   			<td>Win rate</td>
-  			<td><%= @win_rate_p.round(0) %> %</td>
+  			 <td><%= @win_rate_p.round(0) %> %</td>
   		</tr>
   	</tbody>
   </table>
 
   <% @n_wins = 0 %>
   <% @n_losses = 0 %>
+  <% @n_games = 0 %>
 
 <% end %>
