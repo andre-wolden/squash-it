@@ -2,7 +2,7 @@
 
 <h3>Games overview</h3>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Winner</th>
@@ -30,8 +30,8 @@
           <% end %>
         </td>
         <td><%= game.created_at %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_game_path(game), class: "btn btn-warning function_button" %></td>
+        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning function_button" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Game', new_game_path %>
+<%= link_to 'New Game', new_game_path, class: "btn btn-warning new_button" %>

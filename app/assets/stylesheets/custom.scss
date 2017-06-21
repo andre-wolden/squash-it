@@ -7,6 +7,7 @@
 	width: 100%;
 	background-color: #dddddd;
 	border-radius: 5px;
+	font-size: 100%;	
 
 }
 
@@ -20,6 +21,10 @@
 	width: 100%;
 }
 
+.toppen {
+	font-size: 300%;	
+}
+
 section {
   overflow: auto;
 }
@@ -30,7 +35,6 @@ textarea {
 
 body {
 	margin:0;
-	max-width: 600px;
 
 }
 
@@ -55,6 +59,16 @@ body {
 #home_buttons {
 	margin-top: 5px;
 	margin-bottom: 5px;
+	font-size: 200%;	
 }
 
+.new_button {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+table_games {
+    width: 100%;
+    font-size: 100%;
+}
 
